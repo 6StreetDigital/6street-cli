@@ -69,8 +69,9 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
         source: '.',
       });
     } catch (err: unknown) {
-      const errorMsg = err.toString();
-      throw new SfError(`error getting diff: ${errorMsg}`);
+      if (err instanceof Error) {
+        throw new SfError(`error getting diff: ${err.toString()}`);
+      }
     }
     this.log(`Manifest data written to ${outputFolder}.`);
 
@@ -134,7 +135,10 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
       this.log(`Current branch detected: ${currentBranch}`);
       return currentBranch;
     } catch (err: unknown) {
-      throw new SfError(`error getting branch name: ${err.toString()}`);
+      if (err instanceof Error) {
+        throw new SfError(`error getting branch name: ${err.toString()}`);
+      }
+      throw new SfError('error getting branch name');
     }
   }
 
