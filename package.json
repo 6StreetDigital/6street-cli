@@ -1,5 +1,5 @@
 {
-  "name": "6street-cli",
+  "name": "@6street/6street-cli",
   "description": "Workflow and productivity helpers for 6Street Digital",
   "version": "0.2.2",
   "dependencies": {

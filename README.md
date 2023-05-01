@@ -8,7 +8,7 @@
 ## Install
 
 ```bash
-sf plugins install 6street-cli@x.y.z
+sf plugins install @6street/6street-cli@x.y.z
 ```
 
 ## Issues
