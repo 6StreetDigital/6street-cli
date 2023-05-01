@@ -43,6 +43,8 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
     }
 
     const currentBranch = this.getCurrentBranch();
+    const sourceBranch = flags.source ?? (await this.getSourceBranch(currentBranch));
+    const fromCommit = this.getSourceCommit(sourceBranch, currentBranch);
 
     let outputFolder = flags['output-dir'];
     if (outputFolder === './manifest') {
@@ -55,8 +57,6 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
     } else if (!fs.existsSync(outputFolder)) {
       fs.mkdirSync(outputFolder);
     }
-
-    const fromCommit = flags.source ?? (await this.getSourceCommit(currentBranch));
 
     this.log(`Calculating difference between HEAD and branch/commit: ${fromCommit}...`);
     try {
@@ -90,8 +90,15 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
     };
   }
 
-  private async getSourceCommit(currentBranch: string): Promise<string> {
+  private getSourceCommit(sourceBranch: string, currentBranch: string): string {
     this.log(`Finding common ancestor commit for ${currentBranch}...`);
+
+    const sourceCommit = execSync(`git merge-base ${sourceBranch} ${currentBranch}`);
+    return sourceCommit.toString().trim();
+  }
+
+  private async getSourceBranch(currentBranch: string): Promise<string> {
+    this.log(`Finding source branch for ${currentBranch}...`);
 
     const commands = [
       'git show-branch -a', //  Get git branch
@@ -118,8 +125,7 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
       sourceBranch = answers.selectedBranch;
     }
 
-    const sourceCommit = execSync(`git merge-base ${sourceBranch} ${currentBranch}`);
-    return sourceCommit.toString().trim();
+    return sourceBranch;
   }
 
   private hasUncommittedChanges(): boolean {
