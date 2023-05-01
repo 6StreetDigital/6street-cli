@@ -4,15 +4,11 @@ Generates a package.xml manifest based on git changes made in a branch.
 
 # description
 
-Generates a package.xml manifest based on git changes made in a branch.
+Uses the Salesforce Git Delta package to help generate a package.xml manifest based on git changes made in a branch.
 
 # examples
 
 - <%= config.bin %> <%= command.id %>
-
-# flags.name.summary
-
-Overwrites an existing package.xml in the output folder if it exists.
 
 # flags.force.summary
 

@@ -60,6 +60,8 @@ sf plugins
 
 <!-- commands -->
 
+<!-- commandsstop -->
+
 - [`sf release generate manifest`](#sf-release-generate-manifest)
 
 ## `sf release generate manifest`

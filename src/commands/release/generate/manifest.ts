@@ -6,7 +6,7 @@ import { Messages, SfError } from '@salesforce/core';
 import sgd from 'sfdx-git-delta';
 
 Messages.importMessagesDirectory(__dirname);
-const messages = Messages.loadMessages('6street-cli', 'release.generate.manifest');
+const messages = Messages.loadMessages('@6street/6street-cli', 'release.generate.manifest');
 
 export type ReleaseGenerateManifestResult = {
   path: string;
