@@ -2654,9 +2654,9 @@ eslint-config-salesforce-typescript@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/eslint-config-salesforce-typescript/-/eslint-config-salesforce-typescript-1.1.1.tgz"
 
-eslint-config-salesforce@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/eslint-config-salesforce/-/eslint-config-salesforce-1.1.0.tgz"
+eslint-config-salesforce@^1.1.0, eslint-config-salesforce@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-salesforce/-/eslint-config-salesforce-1.2.0.tgz#f01ccd42ec3cfffbc44dd7d6646a0d110c68becb"
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
