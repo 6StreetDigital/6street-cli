@@ -60,8 +60,6 @@ sf plugins
 
 <!-- commands -->
 
-<!-- commandsstop -->
-
 - [`sf release generate manifest`](#sf-release-generate-manifest)
 
 ## `sf release generate manifest`
@@ -83,65 +81,7 @@ GLOBAL FLAGS
 DESCRIPTION
   Generates a package.xml manifest based on git changes made in a branch.
 
-  Generates a package.xml manifest based on git changes made in a branch.
-
-EXAMPLES
-  $ sf release generate manifest
-```
-
-<!-- commandsstop -->
-
-- [`sf release generate manifest`](#sf-release-generate-manifest)
-
-## `sf release generate manifest`
-
-Generates a package.xml manifest based on git changes made in a branch.
-
-```
-USAGE
-  $ sf release generate manifest [--json] [-f] [-d <value>] [-s <value>]
-
-FLAGS
-  -d, --output-dir=<value>  [default: ./manifest] Selected output folder for the manifest file.
-  -f, --force               Overwrites an existing package.xml in the output folder if it exists.
-  -s, --source=<value>      Branch or commit we're comparing to for the diff.
-
-GLOBAL FLAGS
-  --json  Format output as json.
-
-DESCRIPTION
-  Generates a package.xml manifest based on git changes made in a branch.
-
-  Generates a package.xml manifest based on git changes made in a branch.
-
-EXAMPLES
-  $ sf release generate manifest
-```
-
-<!-- commandsstop -->
-
-- [`sf release generate manifest`](#sf-release-generate-manifest)
-
-## `sf release generate manifest`
-
-Generates a package.xml manifest based on git changes made in a branch.
-
-```
-USAGE
-  $ sf release generate manifest [--json] [-f] [-d <value>] [-s <value>]
-
-FLAGS
-  -d, --output-dir=<value>  [default: ./manifest] Selected output folder for the manifest file.
-  -f, --force               Overwrites an existing package.xml in the output folder if it exists.
-  -s, --source=<value>      Branch or commit we're comparing to for the diff.
-
-GLOBAL FLAGS
-  --json  Format output as json.
-
-DESCRIPTION
-  Generates a package.xml manifest based on git changes made in a branch.
-
-  Generates a package.xml manifest based on git changes made in a branch.
+  Uses the Salesforce Git Delta package to help generate a package.xml manifest based on git changes made in a branch.
 
 EXAMPLES
   $ sf release generate manifest
