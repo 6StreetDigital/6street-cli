@@ -938,15 +938,14 @@
     "@salesforce/ts-types" "^1.7.1"
     chalk "^2.4.2"
 
-"@salesforce/core@^3.34.6", "@salesforce/core@^3.34.8":
-  version "3.34.8"
-  resolved "https://registry.npmjs.org/@salesforce/core/-/core-3.34.8.tgz"
+"@salesforce/core@^3.34.6", "@salesforce/core@^3.34.8", "@salesforce/core@^3.36.0":
+  version "3.36.0"
+  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-3.36.0.tgz#cbff147d888eee0b921e368c1fdc1a1a3c2eacab"
   dependencies:
     "@salesforce/bunyan" "^2.0.0"
     "@salesforce/kit" "^1.9.2"
     "@salesforce/schemas" "^1.5.1"
     "@salesforce/ts-types" "^1.7.2"
-    "@types/graceful-fs" "^4.1.6"
     "@types/semver" "^7.3.13"
     ajv "^8.12.0"
     archiver "^5.3.0"
@@ -954,7 +953,6 @@
     debug "^3.2.7"
     faye "^1.4.0"
     form-data "^4.0.0"
-    graceful-fs "^4.2.11"
     js2xmlparser "^4.0.1"
     jsforce "^2.0.0-beta.21"
     jsonwebtoken "9.0.0"
@@ -1206,12 +1204,6 @@
   resolved "https://registry.npmjs.org/@types/glob/-/glob-7.2.0.tgz"
   dependencies:
     "@types/minimatch" "*"
-    "@types/node" "*"
-
-"@types/graceful-fs@^4.1.6":
-  version "4.1.6"
-  resolved "https://registry.npmjs.org/@types/graceful-fs/-/graceful-fs-4.1.6.tgz"
-  dependencies:
     "@types/node" "*"
 
 "@types/http-cache-semantics@*":
@@ -2774,11 +2766,11 @@ eslint-plugin-prefer-arrow@^1.2.1:
   version "1.2.3"
   resolved "https://registry.npmjs.org/eslint-plugin-prefer-arrow/-/eslint-plugin-prefer-arrow-1.2.3.tgz"
 
-eslint-plugin-sf-plugin@^1.15.1:
-  version "1.15.1"
-  resolved "https://registry.npmjs.org/eslint-plugin-sf-plugin/-/eslint-plugin-sf-plugin-1.15.1.tgz"
+eslint-plugin-sf-plugin@^1.15.2:
+  version "1.15.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-sf-plugin/-/eslint-plugin-sf-plugin-1.15.2.tgz#b830eb9f6a24d08f92f9fe24c1a3967bb8ae37a1"
   dependencies:
-    "@salesforce/core" "^3.34.6"
+    "@salesforce/core" "^3.36.0"
     "@typescript-eslint/utils" "^5.58.0"
 
 eslint-scope@^5.1.1:
@@ -3384,7 +3376,7 @@ got@^11:
     p-cancelable "^2.0.0"
     responselike "^2.0.0"
 
-graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.5, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11, graceful-fs@^4.2.4, graceful-fs@^4.2.6:
+graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.5, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4, graceful-fs@^4.2.6:
   version "4.2.11"
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz"
 
