@@ -781,12 +781,12 @@
   version "3.0.4"
   resolved "https://registry.npmjs.org/@oclif/screen/-/screen-3.0.4.tgz"
 
-"@oclif/test@^2.2.21", "@oclif/test@^2.3.17":
-  version "2.3.17"
-  resolved "https://registry.npmjs.org/@oclif/test/-/test-2.3.17.tgz"
+"@oclif/test@^2.2.21", "@oclif/test@^2.3.19":
+  version "2.3.19"
+  resolved "https://registry.yarnpkg.com/@oclif/test/-/test-2.3.19.tgz#0c5f855c1dadeab879fd72856d21a1bff04502e3"
   dependencies:
-    "@oclif/core" "^2.8.2"
-    fancy-test "^2.0.19"
+    "@oclif/core" "^2.8.5"
+    fancy-test "^2.0.21"
 
 "@octokit/auth-token@^2.4.4":
   version "2.5.0"
@@ -2920,9 +2920,9 @@ external-editor@^3.0.3:
     iconv-lite "^0.4.24"
     tmp "^0.0.33"
 
-fancy-test@^2.0.19:
-  version "2.0.19"
-  resolved "https://registry.npmjs.org/fancy-test/-/fancy-test-2.0.19.tgz"
+fancy-test@^2.0.21:
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-2.0.22.tgz#f3ff137a8282b3e27561fea3c3c6e22798c25470"
   dependencies:
     "@types/chai" "*"
     "@types/lodash" "*"
@@ -2930,7 +2930,7 @@ fancy-test@^2.0.19:
     "@types/sinon" "*"
     lodash "^4.17.13"
     mock-stdin "^1.0.0"
-    nock "^13.3.0"
+    nock "^13.3.1"
     stdout-stderr "^0.1.9"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
@@ -4720,9 +4720,9 @@ no-case@^3.0.4:
     lower-case "^2.0.2"
     tslib "^2.0.3"
 
-nock@^13.3.0:
-  version "13.3.0"
-  resolved "https://registry.npmjs.org/nock/-/nock-13.3.0.tgz"
+nock@^13.3.1:
+  version "13.3.1"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-13.3.1.tgz#f22d4d661f7a05ebd9368edae1b5dc0a62d758fc"
   dependencies:
     debug "^4.1.0"
     json-stringify-safe "^5.0.1"
