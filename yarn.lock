@@ -1013,6 +1013,10 @@
   version "0.0.2"
   resolved "https://registry.npmjs.org/@salesforce/prettier-config/-/prettier-config-0.0.2.tgz"
 
+"@salesforce/prettier-config@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@salesforce/prettier-config/-/prettier-config-0.0.3.tgz#ba648d4886bb38adabe073dbea0b3a91b3753bb0"
+
 "@salesforce/schemas@^1.5.1":
   version "1.5.1"
   resolved "https://registry.npmjs.org/@salesforce/schemas/-/schemas-1.5.1.tgz"
