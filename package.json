@@ -6,7 +6,7 @@
     "@oclif/core": "^2.8.5",
     "@salesforce/core": "^3.36.1",
     "@salesforce/kit": "^1.9.2",
-    "@salesforce/sf-plugins-core": "^2.2.10",
+    "@salesforce/sf-plugins-core": "^2.4.3",
     "fs-extra": "^7.0.1",
     "husky": "^7.0.4",
     "sfdx-git-delta": "latest",
