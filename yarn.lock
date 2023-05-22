@@ -781,12 +781,12 @@
   version "3.0.4"
   resolved "https://registry.npmjs.org/@oclif/screen/-/screen-3.0.4.tgz"
 
-"@oclif/test@^2.2.21", "@oclif/test@^2.3.19":
-  version "2.3.19"
-  resolved "https://registry.yarnpkg.com/@oclif/test/-/test-2.3.19.tgz#0c5f855c1dadeab879fd72856d21a1bff04502e3"
+"@oclif/test@^2.2.21", "@oclif/test@^2.3.20":
+  version "2.3.20"
+  resolved "https://registry.yarnpkg.com/@oclif/test/-/test-2.3.20.tgz#b9bb3ee390937be5036ff96a6cfe83b776be805a"
   dependencies:
     "@oclif/core" "^2.8.5"
-    fancy-test "^2.0.21"
+    fancy-test "^2.0.22"
 
 "@octokit/auth-token@^2.4.4":
   version "2.5.0"
@@ -2923,9 +2923,9 @@ external-editor@^3.0.3:
     iconv-lite "^0.4.24"
     tmp "^0.0.33"
 
-fancy-test@^2.0.21:
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-2.0.22.tgz#f3ff137a8282b3e27561fea3c3c6e22798c25470"
+fancy-test@^2.0.22:
+  version "2.0.23"
+  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-2.0.23.tgz#f5e3232b256071ae8f0d2ef9c59ebae0a7c3d45f"
   dependencies:
     "@types/chai" "*"
     "@types/lodash" "*"
