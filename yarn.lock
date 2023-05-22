@@ -938,7 +938,7 @@
     "@salesforce/ts-types" "^1.7.1"
     chalk "^2.4.2"
 
-"@salesforce/core@^3.34.6", "@salesforce/core@^3.34.7", "@salesforce/core@^3.34.8", "@salesforce/core@^3.36.0", "@salesforce/core@^3.36.1":
+"@salesforce/core@^3.34.7", "@salesforce/core@^3.34.8", "@salesforce/core@^3.36.0", "@salesforce/core@^3.36.1":
   version "3.36.1"
   resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-3.36.1.tgz#053a5e1079b9749b62e461e6ac3e630b5689694a"
   dependencies:
@@ -1021,12 +1021,12 @@
   version "1.5.1"
   resolved "https://registry.npmjs.org/@salesforce/schemas/-/schemas-1.5.1.tgz"
 
-"@salesforce/sf-plugins-core@^2.2.10":
-  version "2.2.10"
-  resolved "https://registry.npmjs.org/@salesforce/sf-plugins-core/-/sf-plugins-core-2.2.10.tgz"
+"@salesforce/sf-plugins-core@^2.4.3":
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@salesforce/sf-plugins-core/-/sf-plugins-core-2.4.3.tgz#9d578dc116becf8fd9c4f5d7849692aaa9095538"
   dependencies:
-    "@oclif/core" "^2.8.2"
-    "@salesforce/core" "^3.34.6"
+    "@oclif/core" "^2.8.5"
+    "@salesforce/core" "^3.36.1"
     "@salesforce/kit" "^1.9.2"
     "@salesforce/ts-types" "^1.7.3"
     chalk "^4"
