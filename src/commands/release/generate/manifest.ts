@@ -38,6 +38,9 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
   public async run(): Promise<ReleaseGenerateManifestResult> {
     const { flags } = await this.parse(ReleaseGenerateManifest);
 
+    if (!this.isARepository()) {
+      throw new SfError('This command must be run from within a git repository.');
+    }
     if (this.hasUncommittedChanges()) {
       throw new SfError('This folder has uncommitted changes - please commit before running this command.');
     }
@@ -126,6 +129,11 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
     }
 
     return sourceBranch;
+  }
+
+  private isARepository(): boolean {
+    this.styledHeader('Checking for git repository...');
+    return execSync('git rev-parse --is-inside-work-tree').toString().trim() === 'true';
   }
 
   private hasUncommittedChanges(): boolean {
