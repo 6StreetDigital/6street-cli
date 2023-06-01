@@ -73,7 +73,9 @@ USAGE
 FLAGS
   -d, --output-dir=<value>  [default: ./manifest] Selected output folder for the manifest file.
   -f, --force               Overwrites an existing package.xml in the output folder if it exists.
-  -s, --source=<value>      Branch or commit we're comparing to for the diff.
+  -s, --source=<value>      Branch or commit we're comparing to for the diff. If this flag is omitted, this command will
+                            attempt to look through the git log and guess where this branch originated from - this may
+                            be unreliable.
 
 GLOBAL FLAGS
   --json  Format output as json.
