@@ -356,13 +356,13 @@
   version "4.5.0"
   resolved "https://registry.npmjs.org/@eslint-community/regexpp/-/regexpp-4.5.0.tgz"
 
-"@eslint/eslintrc@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-2.0.2.tgz"
+"@eslint/eslintrc@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-2.0.3.tgz#4910db5505f4d503f27774bf356e3704818a0331"
   dependencies:
     ajv "^6.12.4"
     debug "^4.3.2"
-    espree "^9.5.1"
+    espree "^9.5.2"
     globals "^13.19.0"
     ignore "^5.2.0"
     import-fresh "^3.2.1"
@@ -370,9 +370,9 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@eslint/js@8.39.0":
-  version "8.39.0"
-  resolved "https://registry.npmjs.org/@eslint/js/-/js-8.39.0.tgz"
+"@eslint/js@8.41.0":
+  version "8.41.0"
+  resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.41.0.tgz#080321c3b68253522f7646b55b577dd99d2950b3"
 
 "@gar/promisify@^1.0.1", "@gar/promisify@^1.1.3":
   version "1.1.3"
@@ -613,16 +613,16 @@
     supports-color "^8.1.1"
     tslib "^2"
 
-"@oclif/command@^1.8.22":
-  version "1.8.24"
-  resolved "https://registry.npmjs.org/@oclif/command/-/command-1.8.24.tgz"
+"@oclif/command@^1.8.23":
+  version "1.8.25"
+  resolved "https://registry.yarnpkg.com/@oclif/command/-/command-1.8.25.tgz#9bc7fea9d03320837ca82d851b43b1f089d7b7b9"
   dependencies:
     "@oclif/config" "^1.18.2"
     "@oclif/errors" "^1.3.6"
     "@oclif/help" "^1.0.1"
     "@oclif/parser" "^3.8.10"
     debug "^4.1.1"
-    semver "^7.5.0"
+    semver "^7.5.1"
 
 "@oclif/config@1.18.6":
   version "1.18.6"
@@ -781,12 +781,12 @@
   version "3.0.4"
   resolved "https://registry.npmjs.org/@oclif/screen/-/screen-3.0.4.tgz"
 
-"@oclif/test@^2.2.21", "@oclif/test@^2.3.17":
-  version "2.3.17"
-  resolved "https://registry.npmjs.org/@oclif/test/-/test-2.3.17.tgz"
+"@oclif/test@^2.2.21", "@oclif/test@^2.3.20":
+  version "2.3.20"
+  resolved "https://registry.yarnpkg.com/@oclif/test/-/test-2.3.20.tgz#b9bb3ee390937be5036ff96a6cfe83b776be805a"
   dependencies:
-    "@oclif/core" "^2.8.2"
-    fancy-test "^2.0.19"
+    "@oclif/core" "^2.8.5"
+    fancy-test "^2.0.22"
 
 "@octokit/auth-token@^2.4.4":
   version "2.5.0"
@@ -913,9 +913,9 @@
     mv "~2"
     safe-json-stringify "~1"
 
-"@salesforce/cli-plugins-testkit@^3.3.5":
-  version "3.3.5"
-  resolved "https://registry.yarnpkg.com/@salesforce/cli-plugins-testkit/-/cli-plugins-testkit-3.3.5.tgz#72866456936f013446cb406129a9fef4fa32fe3e"
+"@salesforce/cli-plugins-testkit@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@salesforce/cli-plugins-testkit/-/cli-plugins-testkit-3.4.0.tgz#22ab0d7729590b8cbb5251f718104f91634bd3b4"
   dependencies:
     "@salesforce/core" "^3.34.8"
     "@salesforce/kit" "^1.9.2"
@@ -938,9 +938,9 @@
     "@salesforce/ts-types" "^1.7.1"
     chalk "^2.4.2"
 
-"@salesforce/core@^3.34.6", "@salesforce/core@^3.34.8", "@salesforce/core@^3.36.0":
-  version "3.36.0"
-  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-3.36.0.tgz#cbff147d888eee0b921e368c1fdc1a1a3c2eacab"
+"@salesforce/core@^3.34.7", "@salesforce/core@^3.34.8", "@salesforce/core@^3.36.0", "@salesforce/core@^3.36.1":
+  version "3.36.1"
+  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-3.36.1.tgz#053a5e1079b9749b62e461e6ac3e630b5689694a"
   dependencies:
     "@salesforce/bunyan" "^2.0.0"
     "@salesforce/kit" "^1.9.2"
@@ -1013,16 +1013,20 @@
   version "0.0.2"
   resolved "https://registry.npmjs.org/@salesforce/prettier-config/-/prettier-config-0.0.2.tgz"
 
+"@salesforce/prettier-config@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@salesforce/prettier-config/-/prettier-config-0.0.3.tgz#ba648d4886bb38adabe073dbea0b3a91b3753bb0"
+
 "@salesforce/schemas@^1.5.1":
   version "1.5.1"
   resolved "https://registry.npmjs.org/@salesforce/schemas/-/schemas-1.5.1.tgz"
 
-"@salesforce/sf-plugins-core@^2.2.10":
-  version "2.2.10"
-  resolved "https://registry.npmjs.org/@salesforce/sf-plugins-core/-/sf-plugins-core-2.2.10.tgz"
+"@salesforce/sf-plugins-core@^2.4.3":
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@salesforce/sf-plugins-core/-/sf-plugins-core-2.4.3.tgz#9d578dc116becf8fd9c4f5d7849692aaa9095538"
   dependencies:
-    "@oclif/core" "^2.8.2"
-    "@salesforce/core" "^3.34.6"
+    "@oclif/core" "^2.8.5"
+    "@salesforce/core" "^3.36.1"
     "@salesforce/kit" "^1.9.2"
     "@salesforce/ts-types" "^1.7.3"
     chalk "^4"
@@ -2672,6 +2676,10 @@ eslint-config-salesforce-license@^0.1.6:
   version "0.1.6"
   resolved "https://registry.npmjs.org/eslint-config-salesforce-license/-/eslint-config-salesforce-license-0.1.6.tgz"
 
+eslint-config-salesforce-license@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-salesforce-license/-/eslint-config-salesforce-license-0.2.0.tgz#323193f1aa15dd33fbf108d25fc1210afc11065e"
+
 eslint-config-salesforce-typescript@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/eslint-config-salesforce-typescript/-/eslint-config-salesforce-typescript-1.1.1.tgz"
@@ -2787,18 +2795,18 @@ eslint-scope@^7.2.0:
     esrecurse "^4.3.0"
     estraverse "^5.2.0"
 
-eslint-visitor-keys@^3.3.0, eslint-visitor-keys@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.4.0.tgz"
+eslint-visitor-keys@^3.3.0, eslint-visitor-keys@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.4.1.tgz#c22c48f48942d08ca824cc526211ae400478a994"
 
-eslint@^8.21.0, eslint@^8.32.0:
-  version "8.39.0"
-  resolved "https://registry.npmjs.org/eslint/-/eslint-8.39.0.tgz"
+eslint@^8.32.0, eslint@^8.41.0:
+  version "8.41.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.41.0.tgz#3062ca73363b4714b16dbc1e60f035e6134b6f1c"
   dependencies:
     "@eslint-community/eslint-utils" "^4.2.0"
     "@eslint-community/regexpp" "^4.4.0"
-    "@eslint/eslintrc" "^2.0.2"
-    "@eslint/js" "8.39.0"
+    "@eslint/eslintrc" "^2.0.3"
+    "@eslint/js" "8.41.0"
     "@humanwhocodes/config-array" "^0.11.8"
     "@humanwhocodes/module-importer" "^1.0.1"
     "@nodelib/fs.walk" "^1.2.8"
@@ -2809,8 +2817,8 @@ eslint@^8.21.0, eslint@^8.32.0:
     doctrine "^3.0.0"
     escape-string-regexp "^4.0.0"
     eslint-scope "^7.2.0"
-    eslint-visitor-keys "^3.4.0"
-    espree "^9.5.1"
+    eslint-visitor-keys "^3.4.1"
+    espree "^9.5.2"
     esquery "^1.4.2"
     esutils "^2.0.2"
     fast-deep-equal "^3.1.3"
@@ -2818,13 +2826,12 @@ eslint@^8.21.0, eslint@^8.32.0:
     find-up "^5.0.0"
     glob-parent "^6.0.2"
     globals "^13.19.0"
-    grapheme-splitter "^1.0.4"
+    graphemer "^1.4.0"
     ignore "^5.2.0"
     import-fresh "^3.0.0"
     imurmurhash "^0.1.4"
     is-glob "^4.0.0"
     is-path-inside "^3.0.3"
-    js-sdsl "^4.1.4"
     js-yaml "^4.1.0"
     json-stable-stringify-without-jsonify "^1.0.1"
     levn "^0.4.1"
@@ -2836,13 +2843,13 @@ eslint@^8.21.0, eslint@^8.32.0:
     strip-json-comments "^3.1.0"
     text-table "^0.2.0"
 
-espree@^9.5.1:
-  version "9.5.1"
-  resolved "https://registry.npmjs.org/espree/-/espree-9.5.1.tgz"
+espree@^9.5.2:
+  version "9.5.2"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-9.5.2.tgz#e994e7dc33a082a7a82dceaf12883a829353215b"
   dependencies:
     acorn "^8.8.0"
     acorn-jsx "^5.3.2"
-    eslint-visitor-keys "^3.4.0"
+    eslint-visitor-keys "^3.4.1"
 
 esprima@^4.0.0, esprima@~4.0.0:
   version "4.0.1"
@@ -2920,9 +2927,9 @@ external-editor@^3.0.3:
     iconv-lite "^0.4.24"
     tmp "^0.0.33"
 
-fancy-test@^2.0.19:
-  version "2.0.19"
-  resolved "https://registry.npmjs.org/fancy-test/-/fancy-test-2.0.19.tgz"
+fancy-test@^2.0.22:
+  version "2.0.23"
+  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-2.0.23.tgz#f5e3232b256071ae8f0d2ef9c59ebae0a7c3d45f"
   dependencies:
     "@types/chai" "*"
     "@types/lodash" "*"
@@ -2930,7 +2937,7 @@ fancy-test@^2.0.19:
     "@types/sinon" "*"
     lodash "^4.17.13"
     mock-stdin "^1.0.0"
-    nock "^13.3.0"
+    nock "^13.3.1"
     stdout-stderr "^0.1.9"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
@@ -2961,9 +2968,9 @@ fast-levenshtein@^3.0.0:
   dependencies:
     fastest-levenshtein "^1.0.7"
 
-fast-xml-parser@^4.1.3:
+fast-xml-parser@^4.2.2:
   version "4.2.2"
-  resolved "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-4.2.2.tgz"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.2.2.tgz#cb7310d1e9cf42d22c687b0fae41f3c926629368"
   dependencies:
     strnum "^1.0.5"
 
@@ -3383,6 +3390,10 @@ graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.5, graceful-fs@^4.1.6,
 grapheme-splitter@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz"
+
+graphemer@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/graphemer/-/graphemer-1.4.0.tgz#fb2f1d55e0e3a1849aeffc90c4fa0dd53a0e66c6"
 
 grouped-queue@^2.0.0:
   version "2.0.0"
@@ -3977,10 +3988,6 @@ jake@^10.8.5:
 jmespath@0.16.0:
   version "0.16.0"
   resolved "https://registry.npmjs.org/jmespath/-/jmespath-0.16.0.tgz"
-
-js-sdsl@^4.1.4:
-  version "4.2.0"
-  resolved "https://registry.npmjs.org/js-sdsl/-/js-sdsl-4.2.0.tgz"
 
 js-tokens@^4.0.0:
   version "4.0.0"
@@ -4720,9 +4727,9 @@ no-case@^3.0.4:
     lower-case "^2.0.2"
     tslib "^2.0.3"
 
-nock@^13.3.0:
-  version "13.3.0"
-  resolved "https://registry.npmjs.org/nock/-/nock-13.3.0.tgz"
+nock@^13.3.1:
+  version "13.3.1"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-13.3.1.tgz#f22d4d661f7a05ebd9368edae1b5dc0a62d758fc"
   dependencies:
     debug "^4.1.0"
     json-stringify-safe "^5.0.1"
@@ -5628,9 +5635,15 @@ semver@^6.0.0, semver@^6.3.0:
   version "6.3.0"
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"
 
-semver@^7.1.1, semver@^7.1.3, semver@^7.2.1, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5, semver@^7.3.7, semver@^7.3.8, semver@^7.5.0:
+semver@^7.1.1, semver@^7.1.3, semver@^7.2.1, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5, semver@^7.3.7, semver@^7.3.8:
   version "7.5.0"
   resolved "https://registry.npmjs.org/semver/-/semver-7.5.0.tgz"
+  dependencies:
+    lru-cache "^6.0.0"
+
+semver@^7.5.1:
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.1.tgz#c90c4d631cf74720e46b21c1d37ea07edfab91ec"
   dependencies:
     lru-cache "^6.0.0"
 
@@ -5657,16 +5670,16 @@ set-blocking@^2.0.0:
   resolved "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz"
 
 sfdx-git-delta@latest:
-  version "5.17.1"
-  resolved "https://registry.npmjs.org/sfdx-git-delta/-/sfdx-git-delta-5.17.1.tgz"
+  version "5.18.0"
+  resolved "https://registry.yarnpkg.com/sfdx-git-delta/-/sfdx-git-delta-5.18.0.tgz#ff2d5dad284283a8b7fbe98540e00eff104b60b4"
   dependencies:
-    "@oclif/command" "^1.8.22"
+    "@oclif/command" "^1.8.23"
     "@oclif/config" "^1.18.8"
-    "@oclif/core" "^2.8.0"
+    "@oclif/core" "^2.8.2"
     "@oclif/errors" "^1.3.6"
     "@salesforce/command" "^5.3.5"
-    "@salesforce/core" "^3.34.6"
-    fast-xml-parser "^4.1.3"
+    "@salesforce/core" "^3.34.7"
+    fast-xml-parser "^4.2.2"
     fs-extra "^11.1.1"
     ignore "^5.2.4"
     lodash "^4.17.21"
