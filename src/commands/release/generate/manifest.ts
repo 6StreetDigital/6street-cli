@@ -85,7 +85,7 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
 
     // Return an object to be displayed with --json
     return {
-      path: 'E:\\Projects\\sfdx\\plugins\\6street-cli\\src\\commands\\release\\generate\\manifest.ts',
+      path: __filename,
       output: outputFolder,
     };
   }
@@ -130,8 +130,9 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
 
   private hasUncommittedChanges(): boolean {
     this.styledHeader('Checking for uncommitted changes...');
-    const matchingLines = execSync('git status --untracked-files=no --porcelain | wc -l').toString();
-    return parseInt(matchingLines, 10) > 0;
+    const currentStatus = execSync('git status --untracked-files=no --porcelain').toString().trim();
+    const matchingLines = currentStatus.split('\n').length;
+    return matchingLines > 0;
   }
 
   private getCurrentBranch(): string {
