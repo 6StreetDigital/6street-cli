@@ -613,14 +613,14 @@
     supports-color "^8.1.1"
     tslib "^2"
 
-"@oclif/command@^1.8.23":
-  version "1.8.25"
-  resolved "https://registry.yarnpkg.com/@oclif/command/-/command-1.8.25.tgz#9bc7fea9d03320837ca82d851b43b1f089d7b7b9"
+"@oclif/command@^1.8.25":
+  version "1.8.26"
+  resolved "https://registry.yarnpkg.com/@oclif/command/-/command-1.8.26.tgz#302a1886992352f8f967b80b2728806e5e0b0501"
   dependencies:
     "@oclif/config" "^1.18.2"
     "@oclif/errors" "^1.3.6"
     "@oclif/help" "^1.0.1"
-    "@oclif/parser" "^3.8.10"
+    "@oclif/parser" "^3.8.11"
     debug "^4.1.1"
     semver "^7.5.1"
 
@@ -679,7 +679,7 @@
     widest-line "^3.1.0"
     wrap-ansi "^7.0.0"
 
-"@oclif/core@^2.0.7", "@oclif/core@^2.8.0", "@oclif/core@^2.8.2", "@oclif/core@^2.8.5":
+"@oclif/core@^2.0.7", "@oclif/core@^2.8.0", "@oclif/core@^2.8.5":
   version "2.8.5"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-2.8.5.tgz#7964057bbee5e91dae8b35e030e767f38e50a19e"
   dependencies:
@@ -749,6 +749,15 @@
     "@oclif/linewrap" "^1.0.0"
     chalk "^4.1.0"
     tslib "^2.5.0"
+
+"@oclif/parser@^3.8.11":
+  version "3.8.11"
+  resolved "https://registry.yarnpkg.com/@oclif/parser/-/parser-3.8.11.tgz#991a629a053d9fd38b73cc564d4a05e26b329838"
+  dependencies:
+    "@oclif/errors" "^1.3.6"
+    "@oclif/linewrap" "^1.0.0"
+    chalk "^4.1.0"
+    tslib "^2.5.2"
 
 "@oclif/plugin-help@^5.1.19":
   version "5.2.2"
@@ -927,18 +936,18 @@
     strip-ansi "6.0.1"
     ts-retry-promise "^0.7.0"
 
-"@salesforce/command@^5.3.5":
-  version "5.3.6"
-  resolved "https://registry.npmjs.org/@salesforce/command/-/command-5.3.6.tgz"
+"@salesforce/command@^5.3.8":
+  version "5.3.9"
+  resolved "https://registry.yarnpkg.com/@salesforce/command/-/command-5.3.9.tgz#0e4da5a278237f95d892e0672d67938c61dd3269"
   dependencies:
     "@oclif/core" "^1.25.0"
     "@oclif/test" "^2.2.21"
-    "@salesforce/core" "^3.34.8"
+    "@salesforce/core" "^3.36.2"
     "@salesforce/kit" "^1.8.5"
     "@salesforce/ts-types" "^1.7.1"
     chalk "^2.4.2"
 
-"@salesforce/core@^3.34.7", "@salesforce/core@^3.34.8", "@salesforce/core@^3.36.0", "@salesforce/core@^3.36.1", "@salesforce/core@^3.36.2":
+"@salesforce/core@^3.34.8", "@salesforce/core@^3.36.0", "@salesforce/core@^3.36.1", "@salesforce/core@^3.36.2":
   version "3.36.2"
   resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-3.36.2.tgz#135fa2fb858da6245b9ecff1e7819aeaeead5150"
   dependencies:
@@ -3993,9 +4002,9 @@ js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
 
-js-yaml@3.14.0:
-  version "3.14.0"
-  resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.0.tgz"
+js-yaml@3.14.1, js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.14.1:
+  version "3.14.1"
+  resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -4005,13 +4014,6 @@ js-yaml@4.1.0, js-yaml@^4.1.0:
   resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz"
   dependencies:
     argparse "^2.0.1"
-
-js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.14.1:
-  version "3.14.1"
-  resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz"
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^4.0.0"
 
 js2xmlparser@^4.0.1:
   version "4.0.2"
@@ -5670,22 +5672,22 @@ set-blocking@^2.0.0:
   resolved "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz"
 
 sfdx-git-delta@latest:
-  version "5.18.0"
-  resolved "https://registry.yarnpkg.com/sfdx-git-delta/-/sfdx-git-delta-5.18.0.tgz#ff2d5dad284283a8b7fbe98540e00eff104b60b4"
+  version "5.19.0"
+  resolved "https://registry.yarnpkg.com/sfdx-git-delta/-/sfdx-git-delta-5.19.0.tgz#a17c90abaa175a6c12cda87d5174054efe4f03e2"
   dependencies:
-    "@oclif/command" "^1.8.23"
+    "@oclif/command" "^1.8.25"
     "@oclif/config" "^1.18.8"
-    "@oclif/core" "^2.8.2"
+    "@oclif/core" "^2.8.5"
     "@oclif/errors" "^1.3.6"
-    "@salesforce/command" "^5.3.5"
-    "@salesforce/core" "^3.34.7"
+    "@salesforce/command" "^5.3.8"
+    "@salesforce/core" "^3.36.1"
     fast-xml-parser "^4.2.2"
     fs-extra "^11.1.1"
     ignore "^5.2.4"
     lodash "^4.17.21"
     micromatch "^4.0.5"
     tslib "^2.5.0"
-    xmlbuilder2 "^3.0.2"
+    xmlbuilder2 "^3.1.1"
 
 shebang-command@^1.2.0:
   version "1.2.0"
@@ -6612,15 +6614,14 @@ xml2js@^0.5.0:
     sax ">=0.6.0"
     xmlbuilder "~11.0.0"
 
-xmlbuilder2@^3.0.2:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/xmlbuilder2/-/xmlbuilder2-3.1.0.tgz"
+xmlbuilder2@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/xmlbuilder2/-/xmlbuilder2-3.1.1.tgz#b977ef8a6fb27a1ea7ffa7d850d2c007ff343bc0"
   dependencies:
     "@oozcitak/dom" "1.15.10"
     "@oozcitak/infra" "1.0.8"
     "@oozcitak/util" "8.3.8"
-    "@types/node" "*"
-    js-yaml "3.14.0"
+    js-yaml "3.14.1"
 
 xmlbuilder@~11.0.0:
   version "11.0.1"
