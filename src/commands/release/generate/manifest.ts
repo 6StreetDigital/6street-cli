@@ -112,11 +112,14 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
       "sed 's/[\\^~].*//'",
     ];
 
-    let sourceBranch = execSync(commands.join(' | '), { stdio: [null, 'pipe', 'pipe'] })
-      .toString()
-      .trim();
+    let selectedBranch: string;
 
-    if (!sourceBranch) {
+    try {
+      selectedBranch = execSync(commands.join(' | '), { stdio: [null, 'pipe', 'pipe'] })
+        .toString()
+        .trim();
+      if (!selectedBranch) throw new Error('No source branch found');
+    } catch (err: unknown) {
       this.log('No source branch was found or too many open branches...');
       const answers = await this.prompt<{ selectedBranch: string }>({
         type: 'input',
@@ -125,10 +128,9 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
         message: 'Please enter the name of the branch you wish to compare the current branch against:',
       });
       this.log('Selected answer: ' + answers.selectedBranch);
-      sourceBranch = answers.selectedBranch;
+      selectedBranch = answers.selectedBranch;
     }
-
-    return sourceBranch;
+    return selectedBranch;
   }
 
   private isARepository(): boolean {
@@ -139,8 +141,7 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
   private hasUncommittedChanges(): boolean {
     this.styledHeader('Checking for uncommitted changes...');
     const currentStatus = execSync('git status --untracked-files=no --porcelain').toString().trim();
-    const matchingLines = currentStatus.split('\n').length;
-    return matchingLines > 0;
+    return currentStatus.length > 0 && currentStatus.split('\n').length > 0;
   }
 
   private getCurrentBranch(): string {
