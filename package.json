@@ -3,7 +3,7 @@
   "description": "Workflow and productivity helpers for 6Street Digital",
   "version": "0.3.2",
   "dependencies": {
-    "@oclif/core": "^2.8.5",
+    "@oclif/core": "^2.8.7",
     "@salesforce/core": "^3.36.2",
     "@salesforce/kit": "^1.9.2",
     "@salesforce/sf-plugins-core": "^2.4.3",
