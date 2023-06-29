@@ -73,9 +73,12 @@ export default class ReleaseValidateManifest extends SfCommand<ReleaseValidateMa
     this.log(`Target Org: ${targetOrg}`);
     this.log(chalk.yellow.italic('Note: this may take some time to start if other deployments are queued'));
     try {
-      execSync(`sf project deploy start --dry-run --ignore-conflicts -w 10 --manifest ${manifestPath}`, {
-        stdio: 'inherit',
-      }); // @TODO: make this configurable
+      execSync(
+        `sf project deploy start --dry-run --ignore-conflicts -w 10 --manifest ${manifestPath} --target-org ${targetOrg}`,
+        {
+          stdio: 'inherit',
+        }
+      ); // @TODO: make this configurable
 
       this.log(
         chalk.greenBright(
