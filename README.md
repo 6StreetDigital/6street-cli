@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/v/@6street/6street-cli.svg?label=6street-cli)](https://www.npmjs.com/package/@6street/6street-cli)
 [![Downloads/week](https://img.shields.io/npm/dw/@6street/6street-cli.svg)](https://www.npmjs.com/package/@6street/6street-cli)
-[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://raw.githubusercontent.com/6street/6street-cli/main/LICENSE.txt)
+[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://raw.githubusercontent.com/6Street/6street-cli/main/LICENSE)
 [![Known Vulnerabilities](https://snyk.io/test/github/6street/6street-cli/badge.svg)](https://snyk.io/test/github/6street/6street-cli)
 
 ## Install
