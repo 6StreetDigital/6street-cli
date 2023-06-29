@@ -1,9 +1,15 @@
-import * as fs from 'fs';
-import { execSync } from 'child_process';
+import fs from 'fs';
 import { SfCommand, Flags } from '@salesforce/sf-plugins-core';
 import { Messages, SfError } from '@salesforce/core';
-
+import chalk from 'chalk';
 import sgd from 'sfdx-git-delta';
+import {
+  getCurrentBranch,
+  getSourceBranch,
+  getSourceCommit,
+  hasUncommittedChanges,
+  isARepository,
+} from '../../../shared/sourceControl';
 
 Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@6street/6street-cli', 'release.generate.manifest');
@@ -38,16 +44,18 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
   public async run(): Promise<ReleaseGenerateManifestResult> {
     const { flags } = await this.parse(ReleaseGenerateManifest);
 
-    if (!this.isARepository()) {
+    this.log(chalk.blueBright('Analyzing current project branch and structure...'));
+
+    if (!isARepository()) {
       throw new SfError('This command must be run from within a git repository.');
     }
-    if (this.hasUncommittedChanges()) {
-      throw new SfError('This folder has uncommitted changes - please commit before running this command.');
+    if (hasUncommittedChanges()) {
+      throw new SfError('This project has uncommitted changes - please commit before running this command.');
     }
 
-    const currentBranch = this.getCurrentBranch();
-    const sourceBranch = flags.source ?? (await this.getSourceBranch(currentBranch));
-    const fromCommit = this.getSourceCommit(sourceBranch, currentBranch);
+    const currentBranch = getCurrentBranch();
+    const sourceBranch = flags.source ?? (await getSourceBranch(currentBranch));
+    const fromCommit = getSourceCommit(sourceBranch, currentBranch);
 
     let outputFolder = flags['output-dir'];
     if (outputFolder === './manifest') {
@@ -61,7 +69,7 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
       fs.mkdirSync(outputFolder);
     }
 
-    this.log(`Calculating difference between HEAD and branch/commit: ${fromCommit}...`);
+    this.spinner.start(`Calculating difference between HEAD and branch/commit: ${fromCommit}...`);
     try {
       await sgd({
         to: 'HEAD', // commit sha to where the diff is done. [default : "HEAD"]
@@ -76,12 +84,10 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
         throw new SfError(`error getting diff: ${err.toString()}`);
       }
     }
-    this.log(`Manifest data written to ${outputFolder}.`);
+    this.spinner.stop();
 
     this.cleanupFiles(outputFolder);
-
-    this.styledHeader('Processing complete.');
-    this.log(`Manifest data is available in ${outputFolder}`);
+    this.log(chalk.greenBright(`Processing complete. Manifest data is available in ${outputFolder}`));
 
     // @TODO: Handle the /profiles?
     // @TODO Output a .csv based on the package.xml for easy paste into the deployment doc?
@@ -93,73 +99,8 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
     };
   }
 
-  private getSourceCommit(sourceBranch: string, currentBranch: string): string {
-    this.log(`Finding common ancestor commit for ${currentBranch}...`);
-
-    const sourceCommit = execSync(`git merge-base ${sourceBranch} ${currentBranch}`);
-    return sourceCommit.toString().trim();
-  }
-
-  private async getSourceBranch(currentBranch: string): Promise<string> {
-    this.log(`Finding source branch for ${currentBranch}...`);
-
-    const commands = [
-      'git show-branch -a', //  Get git branch
-      "grep '*'",
-      `grep -v "${currentBranch}"`,
-      'head -n1',
-      "sed 's/.*\\[\\(.*\\)\\].*/\\1/'",
-      "sed 's/[\\^~].*//'",
-    ];
-
-    let selectedBranch: string;
-
-    try {
-      selectedBranch = execSync(commands.join(' | '), { stdio: [null, 'pipe', 'pipe'] })
-        .toString()
-        .trim();
-      if (!selectedBranch) throw new Error('No source branch found');
-    } catch (err: unknown) {
-      this.log('No source branch was found or too many open branches...');
-      const answers = await this.prompt<{ selectedBranch: string }>({
-        type: 'input',
-        name: 'selectedBranch',
-        default: 'develop', // Default to 'develop' if we can't find the source branch
-        message: 'Please enter the name of the branch you wish to compare the current branch against:',
-      });
-      this.log('Selected answer: ' + answers.selectedBranch);
-      selectedBranch = answers.selectedBranch;
-    }
-    return selectedBranch;
-  }
-
-  private isARepository(): boolean {
-    this.styledHeader('Checking for git repository...');
-    return execSync('git rev-parse --is-inside-work-tree').toString().trim() === 'true';
-  }
-
-  private hasUncommittedChanges(): boolean {
-    this.styledHeader('Checking for uncommitted changes...');
-    const currentStatus = execSync('git status --untracked-files=no --porcelain').toString().trim();
-    return currentStatus.length > 0 && currentStatus.split('\n').length > 0;
-  }
-
-  private getCurrentBranch(): string {
-    this.styledHeader('Determining current branch name...');
-    try {
-      const currentBranch = execSync('git symbolic-ref --short HEAD').toString().trim();
-      this.log(`Current branch detected: ${currentBranch}`);
-      return currentBranch;
-    } catch (err: unknown) {
-      if (err instanceof Error) {
-        throw new SfError(`error getting branch name: ${err.toString()}`);
-      }
-      throw new SfError('error getting branch name');
-    }
-  }
-
   private cleanupFiles(outputFolder: string): void {
-    this.styledHeader(`Cleaning up ${outputFolder}...`);
+    this.log(`Cleaning up ${outputFolder}...`);
 
     const oldPackageFolder = outputFolder + '/package';
     const oldFile = oldPackageFolder + '/package.xml';
@@ -173,7 +114,7 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
     const destructiveChangeFolder = outputFolder + '/destructiveChanges';
     const destructiveChangesFile = fs.readFileSync(`${destructiveChangeFolder}/destructiveChanges.xml`);
     if (!destructiveChangesFile.includes('<types>')) {
-      this.log('No destructive changes found. Suppressing output...');
+      this.log(chalk.dim('No destructive changes found - removing empty folder.'));
       fs.rmSync(`${destructiveChangeFolder}`, { recursive: true });
     }
   }

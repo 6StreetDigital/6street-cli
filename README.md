@@ -1,8 +1,8 @@
 # 6street-cli
 
-[![NPM](https://img.shields.io/npm/v/6street-cli.svg?label=6street-cli)](https://www.npmjs.com/package/@6street/6street-cli)
-[![Downloads/week](https://img.shields.io/npm/dw/6street-cli.svg)](https://npmjs.org/package/6street-cli)
-[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://raw.githubusercontent.com/salesforcecli/6street-cli/main/LICENSE.txt)
+[![NPM](https://img.shields.io/npm/v/@6street/6street-cli.svg?label=6street-cli)](https://www.npmjs.com/package/@6street/6street-cli)
+[![Downloads/week](https://img.shields.io/npm/dw/@6street/6street-cli.svg)](https://www.npmjs.com/package/@6street/6street-cli)
+[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://raw.githubusercontent.com/6street/6street-cli/main/LICENSE.txt)
 [![Known Vulnerabilities](https://snyk.io/test/github/6street/6street-cli/badge.svg)](https://snyk.io/test/github/6street/6street-cli)
 
 ## Install
@@ -61,6 +61,7 @@ sf plugins
 <!-- commands -->
 
 - [`sf release generate manifest`](#sf-release-generate-manifest)
+- [`sf release validate manifest`](#sf-release-validate-manifest)
 
 ## `sf release generate manifest`
 
@@ -87,6 +88,32 @@ DESCRIPTION
 
 EXAMPLES
   $ sf release generate manifest
+```
+
+## `sf release validate manifest`
+
+Validates a package.xml manifest against a target org
+
+```
+USAGE
+  $ sf release validate manifest -o <value> [--json] [-f] [-d <value>]
+
+FLAGS
+  -d, --output-dir=<value>  [default: ./manifest] Selected output folder for the manifest file.
+  -f, --force               Overwrites an existing package.xml in the output folder if it exists.
+  -o, --target-org=<value>  (required) Selected target org to perform the validation against
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+DESCRIPTION
+  Validates a package.xml manifest against a target org
+
+  Performs a dry-run against a target org for the current branch using a standard location for package.xml, generating
+  the package using `release generate manifest` if it does not exist yet.
+
+EXAMPLES
+  $ sf release validate manifest
 ```
 
 <!-- commandsstop -->

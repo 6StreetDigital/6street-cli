@@ -1,12 +1,13 @@
 {
   "name": "@6street/6street-cli",
   "description": "Workflow and productivity helpers for 6Street Digital",
-  "version": "0.3.2",
+  "version": "0.4",
   "dependencies": {
     "@oclif/core": "^2.8.5",
     "@salesforce/core": "^3.36.2",
     "@salesforce/kit": "^1.9.2",
     "@salesforce/sf-plugins-core": "^2.4.3",
+    "chalk": "^4",
     "fs-extra": "^7.0.1",
     "husky": "^7.0.4",
     "sfdx-git-delta": "latest",
