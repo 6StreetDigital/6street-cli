@@ -96,12 +96,16 @@ Validates a package.xml manifest against a target org
 
 ```
 USAGE
-  $ sf release validate manifest -o <value> [--json] [-f] [-d <value>]
+  $ sf release validate manifest -o <value> [--json] [-f] [-d <value>] [-l
+    NoTestRun|RunSpecifiedTests|RunLocalTests|RunAllTestsInOrg] [-t <value>]
 
 FLAGS
-  -d, --output-dir=<value>  [default: ./manifest] Selected output folder for the manifest file.
-  -f, --force               Overwrites an existing package.xml in the output folder if it exists.
-  -o, --target-org=<value>  (required) Selected target org to perform the validation against
+  -d, --output-dir=<value>   [default: ./manifest] Selected output folder for the manifest file.
+  -f, --force                Overwrites an existing package.xml in the output folder if it exists.
+  -l, --test-level=<option>  [default: NoTestRun] Which test level of Salesforce deployment to run
+                             <options: NoTestRun|RunSpecifiedTests|RunLocalTests|RunAllTestsInOrg>
+  -o, --target-org=<value>   (required) Selected target org to perform the validation against
+  -t, --tests=<value>...     Which specific test classes to run along with deployment when using RunSpecifiedTests
 
 GLOBAL FLAGS
   --json  Format output as json.
