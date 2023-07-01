@@ -21,3 +21,11 @@ Selected output folder for the manifest file.
 # flags.target-org.summary
 
 Selected target org to perform the validation against
+
+# flags.test-level.summary
+
+Which test level of Salesforce deployment to run
+
+# flags.tests.summary
+
+Which specific test classes to run along with deployment when using RunSpecifiedTests

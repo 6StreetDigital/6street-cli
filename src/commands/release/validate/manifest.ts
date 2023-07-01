@@ -29,11 +29,22 @@ export default class ReleaseValidateManifest extends SfCommand<ReleaseValidateMa
       char: 'd',
       default: './manifest',
     }),
+    'test-level': Flags.string({
+      summary: messages.getMessage('flags.test-level.summary'),
+      char: 'l',
+      options: ['NoTestRun', 'RunSpecifiedTests', 'RunLocalTests', 'RunAllTestsInOrg'],
+      default: 'NoTestRun',
+    }),
     // @TODO: add support for source branch if needed?
     'target-org': Flags.string({
       summary: messages.getMessage('flags.target-org.summary'),
       char: 'o',
       required: true, // @TODO: make optional if we can detect the default org
+    }),
+    tests: Flags.string({
+      summary: messages.getMessage('flags.tests.summary'),
+      char: 't',
+      multiple: true,
     }),
   };
 
@@ -68,18 +79,30 @@ export default class ReleaseValidateManifest extends SfCommand<ReleaseValidateMa
       }
     }
 
+    const hasDestructiveChanges = fs.existsSync(`${outputFolder}/destructiveChanges/destructiveChanges.xml`);
+
     this.log(chalk.blueBright('Validating deployment with a checkonly/dry-run...'));
     this.log(`Manifest: ${manifestPath}`);
     this.log(`Target Org: ${targetOrg}`);
     this.log(chalk.yellow.italic('Note: this may take some time to start if other deployments are queued'));
-    try {
-      execSync(
-        `sf project deploy start --dry-run --ignore-conflicts -w 10 --manifest ${manifestPath} --target-org ${targetOrg}`,
-        {
-          stdio: 'inherit',
-        }
-      ); // @TODO: make this configurable
 
+    let testCommand: string;
+
+    if (flags['test-level'] === 'NoTestRun') {
+      // Need this to be separate because currently `project deploy validate` doesn't support NoTestRun
+      testCommand = `sf project deploy start --dry-run --ignore-conflicts -w 30 --manifest ${manifestPath} --target-org ${targetOrg}`;
+    } else {
+      testCommand = `sf project deploy validate -w 30 --manifest ${manifestPath} --target-org ${targetOrg} --test-level ${flags['test-level']}`;
+    }
+    if (flags['tests'] && flags['test-level'] === 'RunSpecifiedTests') {
+      testCommand += ` --tests ${flags.tests.join(',')}`;
+    }
+    if (hasDestructiveChanges) {
+      testCommand += ` --post-destructive-changes ${outputFolder}/destructiveChanges/destructiveChanges.xml`;
+    }
+
+    try {
+      execSync(testCommand, { stdio: 'inherit' });
       this.log(
         chalk.greenBright(
           'Deployment validation succeeded.  Ensure you commit any changes to manifest files and include profile changes as necessary!'

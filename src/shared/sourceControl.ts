@@ -20,34 +20,14 @@ export function getCurrentBranch(): string {
 }
 
 export async function getSourceBranch(currentBranch: string): Promise<string> {
-  ux.spinner.start(`Finding source branch for ${currentBranch}...`);
-  const commands = [
-    'git show-branch -a', //  Get git branch
-    "grep '*'",
-    `grep -v "${currentBranch}"`,
-    'head -n1',
-    "sed 's/.*\\[\\(.*\\)\\].*/\\1/'",
-    "sed 's/[\\^~].*//'",
-  ];
-
-  let selectedBranch: string;
-  try {
-    selectedBranch = execSync(commands.join(' | '), { stdio: [null, 'pipe', 'pipe'] })
-      .toString()
-      .trim();
-    if (!selectedBranch) throw new Error('No source branch found');
-  } catch (err: unknown) {
-    ux.spinner.stop(chalk.yellow('No source branch was found or too many open branches...'));
-    const answers = await ux.prompter.prompt<{ selectedBranch: string }>({
-      type: 'input',
-      name: 'selectedBranch',
-      default: 'develop', // Default to 'develop' if we can't find the source branch
-      message: 'Please enter the name of the branch you wish to compare the current branch against:',
-    });
-    ux.log(`Selected answer: ${answers.selectedBranch}`);
-    selectedBranch = answers.selectedBranch;
-  }
-  return selectedBranch;
+  const answers = await ux.prompter.prompt<{ selectedBranch: string }>({
+    type: 'input',
+    name: 'selectedBranch',
+    default: 'develop', // Default to 'develop' if we can't find the source branch
+    message: `Please enter the name of the branch you wish to compare branch ${currentBranch} against:`,
+  });
+  ux.log(`Selected answer: ${answers.selectedBranch}`);
+  return answers.selectedBranch;
 }
 
 export function getSourceCommit(sourceBranch: string, currentBranch: string): string {

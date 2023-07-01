@@ -54,8 +54,6 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
     }
 
     const currentBranch = getCurrentBranch();
-    const sourceBranch = flags.source ?? (await getSourceBranch(currentBranch));
-    const fromCommit = getSourceCommit(sourceBranch, currentBranch);
 
     let outputFolder = flags['output-dir'];
     if (outputFolder === './manifest') {
@@ -68,6 +66,9 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
     } else if (!fs.existsSync(outputFolder)) {
       fs.mkdirSync(outputFolder);
     }
+
+    const sourceBranch = flags.source ?? (await getSourceBranch(currentBranch));
+    const fromCommit = getSourceCommit(sourceBranch, currentBranch);
 
     this.spinner.start(`Calculating difference between HEAD and branch/commit: ${fromCommit}...`);
     try {
