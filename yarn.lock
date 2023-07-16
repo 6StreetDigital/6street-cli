@@ -1054,7 +1054,7 @@
     "@salesforce/ts-types" "^1.7.1"
     chalk "^2.4.2"
 
-"@salesforce/core@^3.34.8", "@salesforce/core@^3.36.1", "@salesforce/core@^3.36.2":
+"@salesforce/core@^3.26.4", "@salesforce/core@^3.34.8", "@salesforce/core@^3.36.1", "@salesforce/core@^3.36.2":
   version "3.36.2"
   resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-3.36.2.tgz#135fa2fb858da6245b9ecff1e7819aeaeead5150"
   integrity sha512-IS1rR6Y0tMJYx/+TOAUQ9Gs+Vtum0MHLGfodT7ZJMQZQHEp1S4o0BJ8676uq5sASAnVL64GA+Et/LWCCOWWEuw==
@@ -1075,7 +1075,7 @@
     jsonwebtoken "9.0.0"
     ts-retry-promise "^0.7.0"
 
-"@salesforce/core@^4.3.11", "@salesforce/core@^4.3.7":
+"@salesforce/core@^4.3.7":
   version "4.3.11"
   resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-4.3.11.tgz#3fde6affd77f56ee1915b4a2d594ea424ce84817"
   integrity sha512-rjrS0VoDlNaB4RYKLNZQ8+7QayWh5yTV79apCU9fYe0fR1D1p5tb+GAXe4B7AaOReQ8JOQhPBRMx1uzF3Lqn4A==
