@@ -10,6 +10,7 @@
     "chalk": "^4",
     "fs-extra": "^7.0.1",
     "husky": "^7.0.4",
+    "jsforce": "latest",
     "sfdx-git-delta": "latest",
     "tslib": "^2"
   },
