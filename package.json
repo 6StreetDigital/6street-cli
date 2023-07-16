@@ -1,7 +1,7 @@
 {
   "name": "@6street/6street-cli",
   "description": "Workflow and productivity helpers for 6Street Digital",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "dependencies": {
     "@oclif/core": "^2.8.10",
     "@salesforce/core": "^3.36.2",

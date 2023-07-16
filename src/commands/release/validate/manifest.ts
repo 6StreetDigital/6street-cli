@@ -95,7 +95,7 @@ export default class ReleaseValidateManifest extends SfCommand<ReleaseValidateMa
       testCommand = `sf project deploy validate -w 30 --manifest ${manifestPath} --target-org ${targetOrg} --test-level ${flags['test-level']}`;
     }
     if (flags['tests'] && flags['test-level'] === 'RunSpecifiedTests') {
-      testCommand += ` --tests ${flags.tests.join(',')}`;
+      testCommand += ` --tests ${flags.tests.join(' ')}`;
     }
     if (hasDestructiveChanges) {
       testCommand += ` --post-destructive-changes ${outputFolder}/destructiveChanges/destructiveChanges.xml`;
