@@ -3549,10 +3549,10 @@ fast-safe-stringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz#c406a83b6e70d9e35ce3b30a81141df30aeba884"
   integrity sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==
 
-fast-xml-parser@^4.2.4:
-  version "4.2.6"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.2.6.tgz#30ad37b014c16e31eec0e01fbf90a85cedb4eacf"
-  integrity sha512-Xo1qV++h/Y3Ng8dphjahnYe+rGHaaNdsYOBWL9Y9GCPKpNKilJtilvWkLcI9f9X2DoKTLsZsGYAls5+JL5jfLA==
+fast-xml-parser@^4.2.7:
+  version "4.2.7"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.2.7.tgz#871f2ca299dc4334b29f8da3658c164e68395167"
+  integrity sha512-J8r6BriSLO1uj2miOk1NW0YVm8AGOOu3Si2HQp/cSmo6EA4m3fcwu2WKjJ4RK9wMLBtg69y1kS8baDiQBR41Ig==
   dependencies:
     strnum "^1.0.5"
 
@@ -7083,12 +7083,12 @@ setimmediate@^1.0.5:
   integrity sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==
 
 sfdx-git-delta@latest:
-  version "5.24.0"
-  resolved "https://registry.yarnpkg.com/sfdx-git-delta/-/sfdx-git-delta-5.24.0.tgz#b25105d2f47482e6a991ac16319b521f40754cba"
-  integrity sha512-FjZ90AEl/D5LBvtHeu6jjeHeSAStYwmBLWN3Xy4wyFsabTkT8Ng/B6tCd2gA1zt+eGV7SkfEwwb3b0i0VxW5SA==
+  version "5.24.2"
+  resolved "https://registry.yarnpkg.com/sfdx-git-delta/-/sfdx-git-delta-5.24.2.tgz#f1ebbf70c09336c38e40542728d12cf70c07435f"
+  integrity sha512-bhxoRdTJ/3DuUUzBdS+G9YIGGDxeKZQZDT+gst2NRzrNBElsPucsXdl64GrqH4o2WgDaHbU1tvxTJ3hRMEr65g==
   dependencies:
     "@salesforce/command" "^5.3.9"
-    fast-xml-parser "^4.2.4"
+    fast-xml-parser "^4.2.7"
     fs-extra "^11.1.1"
     ignore "^5.2.4"
     lodash "^4.17.21"
