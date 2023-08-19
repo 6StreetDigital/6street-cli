@@ -797,7 +797,7 @@
     widest-line "^3.1.0"
     wrap-ansi "^7.0.0"
 
-"@oclif/core@^2.11", "@oclif/core@^2.11.1", "@oclif/core@^2.11.7", "@oclif/core@^2.8.4", "@oclif/core@^2.9.3":
+"@oclif/core@^2.11", "@oclif/core@^2.11.1", "@oclif/core@^2.11.8", "@oclif/core@^2.8.4", "@oclif/core@^2.9.3":
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-2.11.8.tgz#780c4fdf53e8569cf754c2a8fefcc7ddeacf1747"
   integrity sha512-GILmztcHBzze45GvxRpUvqQI5nM26kSE/Q21Y+6DtMR+C8etM/hFW26D3uqIAbGlGtg5QEZZ6pjA/Fqgz+gl3A==
@@ -872,12 +872,12 @@
   resolved "https://registry.yarnpkg.com/@oclif/screen/-/screen-3.0.5.tgz#9e435649c176fb9840ecf4264b789c79d7a86df0"
   integrity sha512-8DtTAZ0CsKdYjvGadITQTdpEhfhy6UQ3Q/bj4dVSqTGDS07BMZbPXUo9aqLhWKxbJLQiANJjgU10iYPUHfw8WQ==
 
-"@oclif/test@^2.2.21", "@oclif/test@^2.4.4":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@oclif/test/-/test-2.4.4.tgz#95971b8d5718e8c20595ad8566254fa22b39cfe9"
-  integrity sha512-iDFp6wvxJX01qNOSu+vrbMoPU41vwVJB6AI8FdDmHhQt4kqLVXyXSpqCq7RZi6CgrsYVkK9hdZTREtXBF+2aNQ==
+"@oclif/test@^2.2.21", "@oclif/test@^2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@oclif/test/-/test-2.4.5.tgz#a7794e1eae8b074d7cd4b35d5ab0dde41f168725"
+  integrity sha512-ooGKRKWh1zsAVnF0p0tqXULep2KtmX2wP9/2XCDkPbC/+k0QZKWDgguR2tPM4tggGLl02YaOR4a6gpQNejP+YA==
   dependencies:
-    "@oclif/core" "^2.11.7"
+    "@oclif/core" "^2.11.8"
     fancy-test "^2.0.33"
 
 "@octokit/auth-token@^2.4.4":
