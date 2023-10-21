@@ -1196,12 +1196,12 @@
     chalk "^4"
     inquirer "^8.2.5"
 
-"@salesforce/ts-sinon@^1.4.14":
-  version "1.4.14"
-  resolved "https://registry.yarnpkg.com/@salesforce/ts-sinon/-/ts-sinon-1.4.14.tgz#f36ff049f39f8f712b51e1b655e03cf2988d8a6b"
-  integrity sha512-Le8gueZW8opoJ7PeCS9C4lKad1bUKoBYaArGhBPUDaK+ZItcIeOMT8IXtjP0ajVBHk5wbqGgoxXyThTnTu8jRA==
+"@salesforce/ts-sinon@^1.4.18":
+  version "1.4.18"
+  resolved "https://registry.yarnpkg.com/@salesforce/ts-sinon/-/ts-sinon-1.4.18.tgz#a9ff91370bc3f682fbf964afcbc0fcf5f04d2912"
+  integrity sha512-YR+L5JEZRfZmPGYvamPs+urd753PfS/K6foygYdR9F6MM+e0VMbAQ8Zq2lmJKoZy4aDEencspmp+72wtZKJJpg==
   dependencies:
-    "@salesforce/ts-types" "^2.0.6"
+    "@salesforce/ts-types" "^2.0.8"
     sinon "^5.1.1"
     tslib "^2.6.1"
 
@@ -1212,7 +1212,7 @@
   dependencies:
     tslib "^2.5.0"
 
-"@salesforce/ts-types@^2.0.2", "@salesforce/ts-types@^2.0.6", "@salesforce/ts-types@^2.0.7", "@salesforce/ts-types@^2.0.8":
+"@salesforce/ts-types@^2.0.2", "@salesforce/ts-types@^2.0.7", "@salesforce/ts-types@^2.0.8":
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/@salesforce/ts-types/-/ts-types-2.0.8.tgz#e732b5a42cbec6bda79c089a0633fc643daf8bca"
   integrity sha512-vuzLcxtThBhpuhmnoh8GFrVU8XjdoNyQm9gPtmcjUyUD/9nQIBTAX8oGoUvCiiq93c4LFEmSua+xm3yu0bbNfg==
