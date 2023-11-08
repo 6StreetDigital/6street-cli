@@ -7125,9 +7125,9 @@ setimmediate@^1.0.5:
   integrity sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==
 
 sfdx-git-delta@latest:
-  version "5.26.1"
-  resolved "https://registry.yarnpkg.com/sfdx-git-delta/-/sfdx-git-delta-5.26.1.tgz#942069960bcb5103a598f52e852dcfd9ad08e2b8"
-  integrity sha512-HDFzlBDDQ82j0lmi22657yYGQ3sO1wumJaUpcRMdFvWKVSjtw9f0C33kcbpcT6Pp4XwiBYw1cwXBq0E6uhqucQ==
+  version "5.27.0"
+  resolved "https://registry.yarnpkg.com/sfdx-git-delta/-/sfdx-git-delta-5.27.0.tgz#d6031350c401b4f76c772e7dadecb6345bd112d4"
+  integrity sha512-XddLoZHXphdLc7RCZbtPRdtUPX6O0HiS1g5GPUiMGNfu1131zJWm29lMbiMEClbdy8ydU1s+gfsLVuVSlr0lNg==
   dependencies:
     "@salesforce/command" "^5.3.9"
     fast-xml-parser "^4.3.2"
