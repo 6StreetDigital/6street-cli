@@ -1922,18 +1922,7 @@ array-ify@^1.0.0:
   resolved "https://registry.npmjs.org/array-ify/-/array-ify-1.0.0.tgz"
   integrity sha512-c5AMf34bKdvPhQ7tBGhqkgKNUzMr4WUs+WDtC2ZUGOUncbxKMTvqxYctiseW3+L4bA8ec+GcZ6/A/FW4m8ukng==
 
-array-includes@^3.1.4, array-includes@^3.1.6:
-  version "3.1.6"
-  resolved "https://registry.npmjs.org/array-includes/-/array-includes-3.1.6.tgz"
-  integrity sha512-sgTbLvL6cNnw24FnbaDyjmvddQ2ML8arZsgaJhoABMoplz/4QRhtrYS+alr1BUM1Bwp6dhx8vVCBSLG+StwOFw==
-  dependencies:
-    call-bind "^1.0.2"
-    define-properties "^1.1.4"
-    es-abstract "^1.20.4"
-    get-intrinsic "^1.1.3"
-    is-string "^1.0.7"
-
-array-includes@^3.1.7:
+array-includes@^3.1.4, array-includes@^3.1.7:
   version "3.1.7"
   resolved "https://registry.yarnpkg.com/array-includes/-/array-includes-3.1.7.tgz#8cd2e01b26f7a3086cbc87271593fe921c62abda"
   integrity sha512-dlcsNBIiWhPkHdOEEKnehA+RNUWDc4UqFtnIXU4uuYDPtA4LDkr7qip2p0VvFAEXNDr0yWZ9PJyIRiGjRLQzwQ==
@@ -1960,17 +1949,6 @@ array.prototype.filter@^1.0.3:
     es-array-method-boxes-properly "^1.0.0"
     is-string "^1.0.7"
 
-array.prototype.findlastindex@^1.2.2:
-  version "1.2.3"
-  resolved "https://registry.npmjs.org/array.prototype.findlastindex/-/array.prototype.findlastindex-1.2.3.tgz"
-  integrity sha512-LzLoiOMAxvy+Gd3BAq3B7VeIgPdo+Q8hthvKtXybMvRV0jrXfJM/t8mw7nNlpEcVlVUnCnM2KSX4XU5HmpodOA==
-  dependencies:
-    call-bind "^1.0.2"
-    define-properties "^1.2.0"
-    es-abstract "^1.22.1"
-    es-shim-unscopables "^1.0.0"
-    get-intrinsic "^1.2.1"
-
 array.prototype.findlastindex@^1.2.3:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/array.prototype.findlastindex/-/array.prototype.findlastindex-1.2.4.tgz#d1c50f0b3a9da191981ff8942a0aedd82794404f"
@@ -1982,17 +1960,7 @@ array.prototype.findlastindex@^1.2.3:
     es-errors "^1.3.0"
     es-shim-unscopables "^1.0.2"
 
-array.prototype.flat@^1.2.5, array.prototype.flat@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.npmjs.org/array.prototype.flat/-/array.prototype.flat-1.3.1.tgz"
-  integrity sha512-roTU0KWIOmJ4DRLmwKd19Otg0/mT3qPNt0Qb3GWW8iObuZXxrjB/pzn0R3hqpRSWg4HCwqx+0vwOnWnvlOyeIA==
-  dependencies:
-    call-bind "^1.0.2"
-    define-properties "^1.1.4"
-    es-abstract "^1.20.4"
-    es-shim-unscopables "^1.0.0"
-
-array.prototype.flat@^1.3.2:
+array.prototype.flat@^1.2.5, array.prototype.flat@^1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/array.prototype.flat/-/array.prototype.flat-1.3.2.tgz#1476217df8cff17d72ee8f3ba06738db5b387d18"
   integrity sha512-djYB+Zx2vLewY8RWlNCUdHjDXs2XOgm602S9E7P/UpHgfeHL00cRiIF+IN/G/aUJ7kGPb6yO/ErDI5V2s8iycA==
@@ -2000,16 +1968,6 @@ array.prototype.flat@^1.3.2:
     call-bind "^1.0.2"
     define-properties "^1.2.0"
     es-abstract "^1.22.1"
-    es-shim-unscopables "^1.0.0"
-
-array.prototype.flatmap@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.npmjs.org/array.prototype.flatmap/-/array.prototype.flatmap-1.3.1.tgz"
-  integrity sha512-8UGn9O1FDVvMNB0UlLv4voxRMze7+FpHyF5mSMRjWHUMlpoDViniy05870VlxhfgTnLbpuwTzvD76MTtWxB/mQ==
-  dependencies:
-    call-bind "^1.0.2"
-    define-properties "^1.1.4"
-    es-abstract "^1.20.4"
     es-shim-unscopables "^1.0.0"
 
 array.prototype.flatmap@^1.3.2:
@@ -3431,16 +3389,7 @@ eslint-config-salesforce@^2.0.2:
   resolved "https://registry.yarnpkg.com/eslint-config-salesforce/-/eslint-config-salesforce-2.0.2.tgz#38eb2d8eb2824c66967ed9b45bc92082eba2f225"
   integrity sha512-3jbrI+QFu/KaQbPYIBxItB3okqUtA4EBCGiR6s2kcUMIZBLBBGAURW0k62f9WAv1EagR3eUoO0m9ru7LTj2F5Q==
 
-eslint-import-resolver-node@^0.3.6, eslint-import-resolver-node@^0.3.7:
-  version "0.3.7"
-  resolved "https://registry.npmjs.org/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.7.tgz"
-  integrity sha512-gozW2blMLJCeFpBwugLTGyvVjNoeo1knonXAcatC6bjPBZitotxdWf7Gimr25N4c0AAOo4eOUfaG82IJPDpqCA==
-  dependencies:
-    debug "^3.2.7"
-    is-core-module "^2.11.0"
-    resolve "^1.22.1"
-
-eslint-import-resolver-node@^0.3.9:
+eslint-import-resolver-node@^0.3.6, eslint-import-resolver-node@^0.3.9:
   version "0.3.9"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.9.tgz#d4eaac52b8a2e7c3cd1903eb00f7e053356118ac"
   integrity sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==
@@ -3480,30 +3429,7 @@ eslint-plugin-import@2.26.0:
     resolve "^1.22.0"
     tsconfig-paths "^3.14.1"
 
-eslint-plugin-import@2.28.1:
-  version "2.28.1"
-  resolved "https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.28.1.tgz"
-  integrity sha512-9I9hFlITvOV55alzoKBI+K9q74kv0iKMeY6av5+umsNwayt59fz692daGyjR+oStBQgx6nwR9rXldDev3Clw+A==
-  dependencies:
-    array-includes "^3.1.6"
-    array.prototype.findlastindex "^1.2.2"
-    array.prototype.flat "^1.3.1"
-    array.prototype.flatmap "^1.3.1"
-    debug "^3.2.7"
-    doctrine "^2.1.0"
-    eslint-import-resolver-node "^0.3.7"
-    eslint-module-utils "^2.8.0"
-    has "^1.0.3"
-    is-core-module "^2.13.0"
-    is-glob "^4.0.3"
-    minimatch "^3.1.2"
-    object.fromentries "^2.0.6"
-    object.groupby "^1.0.0"
-    object.values "^1.1.6"
-    semver "^6.3.1"
-    tsconfig-paths "^3.14.2"
-
-eslint-plugin-import@^2.28.1:
+eslint-plugin-import@2.29.1, eslint-plugin-import@^2.28.1:
   version "2.29.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.29.1.tgz#d45b37b5ef5901d639c15270d74d46d161150643"
   integrity sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==
@@ -4444,14 +4370,7 @@ hasha@^5.0.0:
     is-stream "^2.0.0"
     type-fest "^0.8.0"
 
-hasown@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/hasown/-/hasown-2.0.0.tgz"
-  integrity sha512-vUptKVTpIJhcczKBbgnS+RtcuYMB8+oNzPK2/Hp3hanz8JmpATdmmgLgSaadVREkDm+e2giHwY3ZRkyjSIDDFA==
-  dependencies:
-    function-bind "^1.1.2"
-
-hasown@^2.0.1:
+hasown@^2.0.0, hasown@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/hasown/-/hasown-2.0.1.tgz#26f48f039de2c0f8d3356c223fb8d50253519faa"
   integrity sha512-1/th4MHjnwncwXsIW6QMzlvYL9kG5e/CpVvLRZe4XPa8TOUNbCELqmvhDmnkNsAjwaG4+I8gJJL0JBvTTLO9qA==
@@ -4812,7 +4731,7 @@ is-callable@^1.1.3, is-callable@^1.1.4, is-callable@^1.2.7:
   resolved "https://registry.npmjs.org/is-callable/-/is-callable-1.2.7.tgz"
   integrity sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==
 
-is-core-module@^2.11.0, is-core-module@^2.13.0, is-core-module@^2.13.1, is-core-module@^2.5.0, is-core-module@^2.8.1:
+is-core-module@^2.13.0, is-core-module@^2.13.1, is-core-module@^2.5.0, is-core-module@^2.8.1:
   version "2.13.1"
   resolved "https://registry.npmjs.org/is-core-module/-/is-core-module-2.13.1.tgz"
   integrity sha512-hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==
@@ -6508,7 +6427,7 @@ object.assign@^4.1.5:
     has-symbols "^1.0.3"
     object-keys "^1.1.1"
 
-object.fromentries@^2.0.6, object.fromentries@^2.0.7:
+object.fromentries@^2.0.7:
   version "2.0.7"
   resolved "https://registry.npmjs.org/object.fromentries/-/object.fromentries-2.0.7.tgz"
   integrity sha512-UPbPHML6sL8PI/mOqPwsH4G6iyXcCGzLin8KvEPenOZN5lpCNBZZQ+V62vdjB1mQHrmqGQt5/OJzemUA+KJmEA==
@@ -6516,16 +6435,6 @@ object.fromentries@^2.0.6, object.fromentries@^2.0.7:
     call-bind "^1.0.2"
     define-properties "^1.2.0"
     es-abstract "^1.22.1"
-
-object.groupby@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/object.groupby/-/object.groupby-1.0.1.tgz"
-  integrity sha512-HqaQtqLnp/8Bn4GL16cj+CUYbnpe1bh0TtEaWvybszDG4tgxCJuRpV8VGuvNaI1fAnI4lUJzDG55MXcOH4JZcQ==
-  dependencies:
-    call-bind "^1.0.2"
-    define-properties "^1.2.0"
-    es-abstract "^1.22.1"
-    get-intrinsic "^1.2.1"
 
 object.groupby@^1.0.1:
   version "1.0.2"
@@ -6538,16 +6447,7 @@ object.groupby@^1.0.1:
     es-abstract "^1.22.3"
     es-errors "^1.0.0"
 
-object.values@^1.1.5, object.values@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.npmjs.org/object.values/-/object.values-1.1.6.tgz"
-  integrity sha512-FVVTkD1vENCsAcwNs9k6jea2uHC/X0+JcjG8YA60FN5CMaJmG95wT9jek/xX9nornqGRrBkKtzuAu2wuHpKqvw==
-  dependencies:
-    call-bind "^1.0.2"
-    define-properties "^1.1.4"
-    es-abstract "^1.20.4"
-
-object.values@^1.1.7:
+object.values@^1.1.5, object.values@^1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/object.values/-/object.values-1.1.7.tgz#617ed13272e7e1071b43973aa1655d9291b8442a"
   integrity sha512-aU6xnDFYT3x17e/f0IiiwlGPTy2jzMySGfUB4fq6z7CV8l85CWHDk5ErhyhpfDHhrOMwGFhSQkhMGHaIotA6Ng==
@@ -7387,16 +7287,7 @@ resolve-global@1.0.0, resolve-global@^1.0.0:
   dependencies:
     global-dirs "^0.1.1"
 
-resolve@^1.1.6, resolve@^1.10.0, resolve@^1.22.0, resolve@^1.22.1:
-  version "1.22.2"
-  resolved "https://registry.npmjs.org/resolve/-/resolve-1.22.2.tgz"
-  integrity sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==
-  dependencies:
-    is-core-module "^2.11.0"
-    path-parse "^1.0.7"
-    supports-preserve-symlinks-flag "^1.0.0"
-
-resolve@^1.22.4:
+resolve@^1.1.6, resolve@^1.10.0, resolve@^1.22.0, resolve@^1.22.4:
   version "1.22.8"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.8.tgz#b6c87a9f2aa06dfab52e3d70ac8cde321fa5a48d"
   integrity sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==
@@ -7580,14 +7471,7 @@ semver@^6.0.0, semver@^6.3.0, semver@^6.3.1:
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-semver@^7.0.0, semver@^7.1.1, semver@^7.1.3, semver@^7.2.1, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5, semver@^7.3.7, semver@^7.3.8, semver@^7.5.4:
-  version "7.5.4"
-  resolved "https://registry.npmjs.org/semver/-/semver-7.5.4.tgz"
-  integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
-  dependencies:
-    lru-cache "^6.0.0"
-
-semver@^7.5.0:
+semver@^7.0.0, semver@^7.1.1, semver@^7.1.3, semver@^7.2.1, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5, semver@^7.3.7, semver@^7.3.8, semver@^7.5.0, semver@^7.5.4:
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.0.tgz#1a46a4db4bffcccd97b743b5005c8325f23d4e2d"
   integrity sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==
@@ -8262,17 +8146,7 @@ ts-retry-promise@^0.7.0, ts-retry-promise@^0.7.1:
   resolved "https://registry.npmjs.org/ts-retry-promise/-/ts-retry-promise-0.7.1.tgz"
   integrity sha512-NhHOCZ2AQORvH42hOPO5UZxShlcuiRtm7P2jIq2L2RY3PBxw2mLnUsEdHrIslVBFya1v5aZmrR55lWkzo13LrQ==
 
-tsconfig-paths@^3.14.1, tsconfig-paths@^3.14.2:
-  version "3.14.2"
-  resolved "https://registry.npmjs.org/tsconfig-paths/-/tsconfig-paths-3.14.2.tgz"
-  integrity sha512-o/9iXgCYc5L/JxCHPe3Hvh8Q/2xm5Z+p18PESBU6Ff33695QnCHBEjcytY2q19ua7Mbl/DavtBOLq+oG0RCL+g==
-  dependencies:
-    "@types/json5" "^0.0.29"
-    json5 "^1.0.2"
-    minimist "^1.2.6"
-    strip-bom "^3.0.0"
-
-tsconfig-paths@^3.15.0:
+tsconfig-paths@^3.14.1, tsconfig-paths@^3.15.0:
   version "3.15.0"
   resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.15.0.tgz#5299ec605e55b1abb23ec939ef15edaf483070d4"
   integrity sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==
