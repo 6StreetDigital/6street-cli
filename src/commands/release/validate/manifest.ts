@@ -1,5 +1,5 @@
-import { execSync } from 'child_process';
-import fs from 'fs';
+import { execSync } from 'node:child_process';
+import fs from 'node:fs';
 import { SfCommand, Flags } from '@salesforce/sf-plugins-core';
 import { Messages, SfError } from '@salesforce/core';
 import chalk from 'chalk';
@@ -22,6 +22,11 @@ export default class ReleaseValidateManifest extends SfCommand<ReleaseValidateMa
     force: Flags.boolean({
       summary: messages.getMessage('flags.force.summary'),
       char: 'f',
+      required: false,
+    }),
+    ignore: Flags.boolean({
+      summary: messages.getMessage('flags.ignore.summary'),
+      char: 'i',
       required: false,
     }),
     'output-dir': Flags.directory({

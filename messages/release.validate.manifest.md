@@ -14,6 +14,10 @@ Performs a dry-run against a target org for the current branch using a standard 
 
 Overwrites an existing package.xml in the output folder if it exists.
 
+# flags.ignore.summary
+
+Ignores uncommitted changes to repository files when calculating the SGD diff
+
 # flags.output-dir.summary
 
 Selected output folder for the manifest file.

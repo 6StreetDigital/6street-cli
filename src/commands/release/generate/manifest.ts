@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'node:fs';
 import { SfCommand, Flags } from '@salesforce/sf-plugins-core';
 import { Messages, SfError } from '@salesforce/core';
 import chalk from 'chalk';
@@ -30,6 +30,11 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
       char: 'f',
       required: false,
     }),
+    ignore: Flags.boolean({
+      summary: messages.getMessage('flags.ignore.summary'),
+      char: 'i',
+      required: false,
+    }),
     'output-dir': Flags.directory({
       summary: messages.getMessage('flags.output-dir.summary'),
       char: 'd',
@@ -49,8 +54,8 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
     if (!isARepository()) {
       throw new SfError('This command must be run from within a git repository.');
     }
-    if (hasUncommittedChanges()) {
-      throw new SfError('This project has uncommitted changes - please commit before running this command.');
+    if (hasUncommittedChanges() && !flags.ignore) {
+      throw new SfError('This project has uncommitted changes - please commit or stash before running this command.');
     }
 
     const currentBranch = getCurrentBranch();
@@ -72,13 +77,20 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
 
     this.spinner.start(`Calculating difference between HEAD and branch/commit: ${fromCommit}...`);
     try {
+      // Below commented lines are being reported as essential by TS but should have safe failover from SGD
       await sgd({
         to: 'HEAD', // commit sha to where the diff is done. [default : "HEAD"]
         from: fromCommit, // (required) commit sha from where the diff is done. [default : git rev-list --max-parents=0 HEAD]
         output: outputFolder, // source package specific output. [default : "./output"]
-        //   apiVersion: 'latest', // salesforce API version. [default : latest]
         repo: '.', // git repository location. [default : "."]
         source: '.',
+        // apiVersion: 59.0, // salesforce API version. [default : latest]
+        // ignore: '',
+        // ignoreDestructive: '',
+        // ignoreWhitespace: true,
+        // generateDelta: false,
+        // include: '',
+        // includeDestructive: '',
       });
     } catch (err: unknown) {
       if (err instanceof Error) {

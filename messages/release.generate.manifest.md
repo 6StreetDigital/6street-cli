@@ -10,6 +10,10 @@ Uses the Salesforce Git Delta package to help generate a package.xml manifest ba
 
 - <%= config.bin %> <%= command.id %>
 
+# flags.ignore.summary
+
+Ignores uncommitted changes to repository files when calculating the SGD diff
+
 # flags.force.summary
 
 Overwrites an existing package.xml in the output folder if it exists.
