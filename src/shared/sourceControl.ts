@@ -1,4 +1,4 @@
-import { execSync } from 'child_process';
+import { execSync } from 'node:child_process';
 import { SfError } from '@salesforce/core';
 import { Ux } from '@salesforce/sf-plugins-core';
 import chalk from 'chalk';

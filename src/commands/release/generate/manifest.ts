@@ -83,14 +83,14 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
         from: fromCommit, // (required) commit sha from where the diff is done. [default : git rev-list --max-parents=0 HEAD]
         output: outputFolder, // source package specific output. [default : "./output"]
         repo: '.', // git repository location. [default : "."]
-        source: '.',
-        // apiVersion: 59.0, // salesforce API version. [default : latest]
-        // ignore: '',
-        // ignoreDestructive: '',
-        // ignoreWhitespace: true,
-        // generateDelta: false,
-        // include: '',
-        // includeDestructive: '',
+        source: '.', // source package location. [default : "."]
+        apiVersion: 59.0, // salesforce API version. [default : latest]
+        ignore: '',
+        ignoreDestructive: '',
+        ignoreWhitespace: false,
+        generateDelta: false,
+        include: '',
+        includeDestructive: '',
       });
     } catch (err: unknown) {
       if (err instanceof Error) {
