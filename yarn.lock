@@ -4418,7 +4418,7 @@ ignore-walk@^6.0.0:
   dependencies:
     minimatch "^9.0.0"
 
-ignore@^5.2.0, ignore@^5.2.4, ignore@^5.3.0:
+ignore@^5.2.0, ignore@^5.3.0:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.1.tgz#5073e554cd42c5b33b394375f538b8593e34d4ef"
   integrity sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==
@@ -7342,14 +7342,14 @@ setimmediate@^1.0.5:
   integrity sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==
 
 sfdx-git-delta@latest:
-  version "5.28.0"
-  resolved "https://registry.npmjs.org/sfdx-git-delta/-/sfdx-git-delta-5.28.0.tgz"
-  integrity sha512-Q3bk4YMMK1cIBCC67f0doaAi5ttYYDVIXCMzEGlYEzEOSkKAOGP8Vc6tI/Fclvc5gu8FbMPxfOIafcD+79Adzw==
+  version "5.34.0"
+  resolved "https://registry.yarnpkg.com/sfdx-git-delta/-/sfdx-git-delta-5.34.0.tgz#20f882c9fceb5c93bcf9426599a56872f5759f98"
+  integrity sha512-cXgP3kab9axhY8oec1urkulhY/Aq9B35r/4hGlgO6W3Zo4ydda61Ydr3Afj45A7yPM0KKMfZayY8GskfhD+5Zw==
   dependencies:
     "@salesforce/command" "^5.3.9"
     fast-xml-parser "^4.3.2"
     fs-extra "^11.1.1"
-    ignore "^5.2.4"
+    ignore "^5.3.0"
     lodash "^4.17.21"
     xmlbuilder2 "^3.1.1"
 
