@@ -5,7 +5,6 @@ import { SfCommand, Flags } from '@salesforce/sf-plugins-core';
 import { Messages, SfError } from '@salesforce/core';
 import chalk from 'chalk';
 
-import { install } from 'husky';
 import {
   getCurrentBranch,
   getSourceBranch,
