@@ -819,7 +819,7 @@
     widest-line "^3.1.0"
     wrap-ansi "^7.0.0"
 
-"@oclif/core@^2.11", "@oclif/core@^2.11.4", "@oclif/core@^2.15.0":
+"@oclif/core@^2.11.4", "@oclif/core@^2.15.0", "@oclif/core@^2.16":
   version "2.16.0"
   resolved "https://registry.npmjs.org/@oclif/core/-/core-2.16.0.tgz"
   integrity sha512-dL6atBH0zCZl1A1IXCKJgLPrM/wR7K+Wi401E/IvqsK8m2iCHW+0TEOGrans/cuN3oTW+uxIyJFHJ8Im0k4qBw==
@@ -7663,7 +7663,7 @@ setimmediate@^1.0.5:
   resolved "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz"
   integrity sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==
 
-sfdx-git-delta@latest:
+sfdx-git-delta@any:
   version "5.38.4"
   resolved "https://registry.npmjs.org/sfdx-git-delta/-/sfdx-git-delta-5.38.4.tgz"
   integrity sha512-JHDVTOspnNnZ0aCF/tgUdQAsOrLmDIJwTUr9Br9xVpTBK93Q5lQ3ee69k7q8alNeIkUkBLRiv0dUq7hoWi7oAg==

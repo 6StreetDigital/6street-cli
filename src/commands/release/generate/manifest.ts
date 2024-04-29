@@ -127,9 +127,9 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
     }
   }
 
+  // eslint-disable-next-line class-methods-use-this
   private isSGDInstalled(): boolean {
-    this.log('Checking for installed copy of SGD ...');
     const stdout = execSync('sf plugins --core');
-    return stdout.includes('salesforce-git-delta');
+    return stdout.includes('salesforce-git-delta') || stdout.includes('sfdx-git-delta');
   }
 }
