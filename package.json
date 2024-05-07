@@ -1,16 +1,15 @@
 {
   "name": "@6street/6street-cli",
   "description": "Workflow and productivity helpers for 6Street Digital",
-  "version": "0.6.1",
+  "version": "0.7.1",
   "dependencies": {
     "@oclif/core": "^2.16",
-    "@salesforce/core": "^4.3",
-    "@salesforce/kit": "^3",
-    "@salesforce/sf-plugins-core": "^3",
+    "@salesforce/core": "latest",
+    "@salesforce/kit": "latest",
+    "@salesforce/sf-plugins-core": "latest",
     "chalk": "^4",
     "fs-extra": "^11",
     "husky": "^8",
-    "sfdx-git-delta": "latest",
     "tslib": "^2"
   },
   "devDependencies": {
@@ -20,7 +19,7 @@
     "@salesforce/dev-scripts": "^4.3.0",
     "@salesforce/prettier-config": "^0.0.3",
     "@salesforce/ts-sinon": "^1.4.19",
-    "@swc/core": "^1.4.16",
+    "@swc/core": "^1.4.17",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.62.0",
     "chai": "^4.4.1",
@@ -32,7 +31,7 @@
     "eslint-plugin-header": "^3.0.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-jsdoc": "^39.9.1",
-    "eslint-plugin-sf-plugin": "^1.17.3",
+    "eslint-plugin-sf-plugin": "^1.18.3",
     "mocha": "^9.2.2",
     "nyc": "^15.1.0",
     "oclif": "^3.17.1",
@@ -43,6 +42,9 @@
     "ts-node": "^10.9.2",
     "typescript": "^4.8.4",
     "wireit": "^0.14.1"
+  },
+  "peerDependencies": {
+    "sfdx-git-delta": "any"
   },
   "engines": {
     "node": ">=14.0.0"

@@ -1,8 +1,10 @@
 import fs from 'node:fs';
+import { exec, execSync } from 'node:child_process';
+import { promisify } from 'node:util';
 import { SfCommand, Flags } from '@salesforce/sf-plugins-core';
 import { Messages, SfError } from '@salesforce/core';
 import chalk from 'chalk';
-import sgd from 'sfdx-git-delta';
+
 import {
   getCurrentBranch,
   getSourceBranch,
@@ -11,8 +13,11 @@ import {
   isARepository,
 } from '../../../shared/sourceControl';
 
+// @TODO Handle checking for installation prereq, add to peerDependencies and prompt for installation if missing
+
 Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@6street/6street-cli', 'release.generate.manifest');
+const execPromise = promisify(exec);
 
 export type ReleaseGenerateManifestResult = {
   path: string;
@@ -51,6 +56,9 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
 
     this.log(chalk.blueBright('Analyzing current project branch and structure...'));
 
+    if (!this.isSGDInstalled()) {
+      throw new SfError('This command requires the Salesforce CLI plugin "Salesforce Git Delta" to be installed.');
+    }
     if (!isARepository()) {
       throw new SfError('This command must be run from within a git repository.');
     }
@@ -77,21 +85,8 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
 
     this.spinner.start(`Calculating difference between HEAD and branch/commit: ${fromCommit}...`);
     try {
-      // Below commented lines are being reported as essential by TS but should have safe failover from SGD
-      await sgd({
-        to: 'HEAD', // commit sha to where the diff is done. [default : "HEAD"]
-        from: fromCommit, // (required) commit sha from where the diff is done. [default : git rev-list --max-parents=0 HEAD]
-        output: outputFolder, // source package specific output. [default : "./output"]
-        repo: '.', // git repository location. [default : "."]
-        source: '.', // source package location. [default : "."]
-        apiVersion: 59.0, // salesforce API version. [default : latest]
-        ignore: '',
-        ignoreDestructive: '',
-        ignoreWhitespace: false,
-        generateDelta: false,
-        include: '',
-        includeDestructive: '',
-      });
+      const commandToRun = `sf sgd source delta --to HEAD --from ${fromCommit} --output ${outputFolder}`;
+      await execPromise(commandToRun);
     } catch (err: unknown) {
       if (err instanceof Error) {
         throw new SfError(`error getting diff: ${err.toString()}`);
@@ -130,5 +125,11 @@ export default class ReleaseGenerateManifest extends SfCommand<ReleaseGenerateMa
       this.log(chalk.dim('No destructive changes found - removing empty folder.'));
       fs.rmSync(`${destructiveChangeFolder}`, { recursive: true });
     }
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  private isSGDInstalled(): boolean {
+    const stdout = execSync('sf plugins --core');
+    return stdout.includes('salesforce-git-delta') || stdout.includes('sfdx-git-delta');
   }
 }
