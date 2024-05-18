@@ -15,7 +15,7 @@
     "@salesforce/dev-config": "^4.1.0",    
     "@salesforce/dev-scripts": "^9",
     "@salesforce/ts-sinon": "^1.4.19",
-    "@swc/core": "^1.4.17",
+    "@swc/core": "^1.5.7",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
     "chai": "^4.4.1",
