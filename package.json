@@ -13,6 +13,7 @@
     "@commitlint/config-conventional": "latest",
     "@salesforce/cli-plugins-testkit": "latest",
     "@salesforce/dev-config": "latest",
+    "@salesforce/dev-scripts": "latest",
     "@salesforce/prettier-config": "latest",
     "@swc/core": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
