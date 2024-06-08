@@ -46,8 +46,8 @@ export function hasUncommittedChanges(): boolean {
   } else if (currentStatus.length > 0 && currentStatus.split('\n').length > 0 && !currentStatus.includes('force-app')) {
     ux.log(
       chalk.dim(
-        'There are uncommitted changes in your repository, but they appear to be outside of the project source folder. Ignoring...'
-      )
+        'There are uncommitted changes in your repository, but they appear to be outside of the project source folder. Ignoring...',
+      ),
     );
     ux.log(chalk.dim(currentStatus));
   }
